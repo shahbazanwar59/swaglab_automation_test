@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO" strict="true">
+	<Appenders>
+		<Appender type="Console" name="STDOUT">
+			<Layout type="PatternLayout"
+				pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss} [%t] (%F:%L) - %msg%n" />
+		</Appender>
+
+		<Appender type="File" name="file" fileName="./log4j2/log4j2.log">
+			<Layout type="PatternLayout"
+				pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss} [%t] (%F:%L) - %msg%n" />
+		</Appender>
+	</Appenders>
+
+
+	<Loggers>
+		<Root level="INFO">
+			<AppenderRef ref="STDOUT" />
+			<AppenderRef ref="file" />
+		</Root>
+	</Loggers>
+</Configuration>
