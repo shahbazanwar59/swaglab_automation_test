@@ -40,6 +40,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -49,7 +50,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>May 23, 2026 07:13:36 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Jun 21, 2026 05:34:55 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -64,7 +65,7 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -76,8 +77,8 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@SwagAddProductToCart</a></li>
 					<li><a href='#'>@SwagLogin</a></li>
+					<li><a href='#'>@SwagAddProductToCart</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -119,12 +120,12 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
-                    <span class='strong'>2</span> features passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='$0%'>
+                    <span class='strong'>0</span> features passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
+                    2</span> features failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped
                 </div>
@@ -137,12 +138,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>2</span> scenarios passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'>
+                    <span class='strong'>0</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
+                    2</span> scenarios failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -157,14 +158,14 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>11</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'>
+                    <span class='strong'>0</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> steps failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='18%'>
+                    2</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='81%'>
+                    9</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> others
                 </div>
@@ -185,11 +186,11 @@
 	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Login to the swag application</span>
-						<span class='test-time'>May 23, 2026 07:13:39 PM</span>
-						<span class='test-status right pass'>Pass</span>
+						<span class='test-time'>Jun 21, 2026 05:34:58 PM</span>
+						<span class='test-status right fail'>Fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -202,11 +203,11 @@
   I want to log into the application
   So that I can access my account details</div>
 
-<div class='scenario node' test-id='2' status='pass'>
+<div class='scenario node' test-id='2' status='fail'>
 
-	<span class='duration right label'>00 00 23.927</span>
+	<span class='duration right label'>00 00 09.723</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Successful login with valid credentials</div>
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Successful login with valid credentials</div>
 	</div>
 	
 	
@@ -215,30 +216,58 @@
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='4' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(StepDefinitions.SwagLogin_StepDef.user_enters_valid_username_and_password())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user enters valid username and password</div>
+		<li test-id='4' class='node given Fail' status='Fail'>
+			<div class="step-name" title="(StepDefinitions.SwagLogin_StepDef.user_enters_valid_username_and_password())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given user enters valid username and password</div>
 
 
+					<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#user\-nam"}
+  (Session info: chrome=149.0.7827.115)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [01b83766ac460b4c50c2235a7132a965, findElement {using=id, value=user-nam}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.115, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53863}, goog:processID: 18380, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53863/devtoo..., se:cdpVersion: 149.0.7827.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 01b83766ac460b4c50c2235a7132a965
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at StepDefinitions.SwagLogin_StepDef.user_enters_valid_username_and_password(SwagLogin_StepDef.java:20)
+	at ✽.user enters valid username and password(classpath:features/TC001_SwagLogin.feature:8)
+</textarea>
 		</li>
-		<li test-id='5' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(StepDefinitions.SwagLogin_StepDef.clicks_on_the_login_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When clicks on the login button</div>
+		<li test-id='5' class='node when Skip' status='Skip'>
+			<div class="step-name" title="(StepDefinitions.SwagLogin_StepDef.clicks_on_the_login_button())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When clicks on the login button</div>
 
 
+					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='6' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(StepDefinitions.SwagLogin_StepDef.user_should_be_navigated_to_the_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user should be navigated to the home page</div>
+		<li test-id='6' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(StepDefinitions.SwagLogin_StepDef.user_should_be_navigated_to_the_home_page())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And user should be navigated to the home page</div>
 
 
+					<div class="node-step">Step skipped</div>
 		</li>
 	</ul>
 </div>
 					</div>
 				</li>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='9'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='8'>
 					<div class='test-heading'>
 						<span class='test-name'>Add Product to the swag application</span>
-						<span class='test-time'>May 23, 2026 07:14:03 PM</span>
-						<span class='test-status right pass'>Pass</span>
+						<span class='test-time'>Jun 21, 2026 05:35:08 PM</span>
+						<span class='test-status right fail'>Fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -251,11 +280,11 @@
   I want to add product into the cart
   So that I can perform transaction</div>
 
-<div class='scenario node' test-id='10' status='pass'>
+<div class='scenario node' test-id='9' status='fail'>
 
-	<span class='duration right label'>00 00 21.243</span>
+	<span class='duration right label'>00 00 06.743</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Product add to cart successfully and perform transaction.</div>
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Product add to cart successfully and perform transaction.</div>
 	</div>
 	
 	
@@ -264,45 +293,79 @@
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='12' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(StepDefinitions.SwagAddProductToCart_StepDef.user_select_the_prodcut())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user select the prodcut</div>
+		<li test-id='11' class='node given Fail' status='Fail'>
+			<div class="step-name" title="(StepDefinitions.SwagAddProductToCart_StepDef.user_select_the_prodcut())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given user select the prodcut</div>
 
 
+					<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#user\-nam"}
+  (Session info: chrome=149.0.7827.115)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b781f91118abd464462081a33d9ea2f6, findElement {using=id, value=user-nam}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.115, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53475}, goog:processID: 9568, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53475/devtoo..., se:cdpVersion: 149.0.7827.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b781f91118abd464462081a33d9ea2f6
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at StepDefinitions.Login.swaglogin(Login.java:17)
+	at StepDefinitions.SwagAddProductToCart_StepDef.user_select_the_prodcut(SwagAddProductToCart_StepDef.java:25)
+	at ✽.user select the prodcut(classpath:features/TC002_SwagAddProductToCart.feature:8)
+</textarea>
 		</li>
-		<li test-id='13' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(StepDefinitions.SwagAddProductToCart_StepDef.product_available_add_the_product_to_cart())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When product available add the product to cart</div>
+		<li test-id='12' class='node when Skip' status='Skip'>
+			<div class="step-name" title="(StepDefinitions.SwagAddProductToCart_StepDef.product_available_add_the_product_to_cart())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When product available add the product to cart</div>
 
 
+					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='14' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(StepDefinitions.SwagAddProductToCart_StepDef.click_on_add_to_cart_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on add to cart button</div>
+		<li test-id='13' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(StepDefinitions.SwagAddProductToCart_StepDef.click_on_add_to_cart_button())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And click on add to cart button</div>
 
 
+					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='15' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(StepDefinitions.SwagAddProductToCart_StepDef.Checkout_the_Product())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Checkout the Product</div>
+		<li test-id='14' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(StepDefinitions.SwagAddProductToCart_StepDef.Checkout_the_Product())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then Checkout the Product</div>
 
 
+					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='16' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(StepDefinitions.SwagAddProductToCart_StepDef.Enter_Your_Checkout_Information())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Enter Your Checkout Information</div>
+		<li test-id='15' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(StepDefinitions.SwagAddProductToCart_StepDef.Enter_Your_Checkout_Information())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then Enter Your Checkout Information</div>
 
 
+					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='17' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(StepDefinitions.SwagAddProductToCart_StepDef.Continue_to_the_Checkout())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Continue to the Checkout</div>
+		<li test-id='16' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(StepDefinitions.SwagAddProductToCart_StepDef.Continue_to_the_Checkout())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then Continue to the Checkout</div>
 
 
+					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='18' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(StepDefinitions.SwagAddProductToCart_StepDef.Finish_the_Checkout_Process())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Finish the Checkout Process</div>
+		<li test-id='17' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(StepDefinitions.SwagAddProductToCart_StepDef.Finish_the_Checkout_Process())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Finish the Checkout Process</div>
 
 
+					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='19' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(StepDefinitions.SwagAddProductToCart_StepDef.Back_to_Home())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Back to Home</div>
+		<li test-id='18' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(StepDefinitions.SwagAddProductToCart_StepDef.Back_to_Home())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then Back to Home</div>
 
 
+					<div class="node-step">Step skipped</div>
 		</li>
 	</ul>
 </div>
@@ -350,15 +413,15 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@SwagAddProductToCart</span>
+						<span class='category-name'>@SwagLogin</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -372,9 +435,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>May 23, 2026 07:14:03 PM</td>
-										<td class='linked' test-id='10'>Product add to cart successfully and perform transaction.</td>
-										<td><span class='test-status Pass'>Pass</span></td>
+										<td>Jun 21, 2026 05:34:58 PM</td>
+										<td class='linked' test-id='2'>Successful login with valid credentials</td>
+										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -383,15 +446,15 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@SwagLogin</span>
+						<span class='category-name'>@SwagAddProductToCart</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -405,9 +468,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>May 23, 2026 07:13:39 PM</td>
-										<td class='linked' test-id='2'>Successful login with valid credentials</td>
-										<td><span class='test-status Pass'>Pass</span></td>
+										<td>Jun 21, 2026 05:35:08 PM</td>
+										<td class='linked' test-id='9'>Product add to cart successfully and perform transaction.</td>
+										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -423,7 +486,119 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jun 21, 2026 05:35:07 PM</td>
+										<td class='linked' test-id='4'>Given user enters valid username and password</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#user\-nam"}
+  (Session info: chrome=149.0.7827.115)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [01b83766ac460b4c50c2235a7132a965, findElement {using=id, value=user-nam}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.115, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53863}, goog:processID: 18380, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53863/devtoo..., se:cdpVersion: 149.0.7827.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 01b83766ac460b4c50c2235a7132a965
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at StepDefinitions.SwagLogin_StepDef.user_enters_valid_username_and_password(SwagLogin_StepDef.java:20)
+	at ✽.user enters valid username and password(classpath:features/TC001_SwagLogin.feature:8)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2026 05:35:14 PM</td>
+										<td class='linked' test-id='11'>Given user select the prodcut</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#user\-nam"}
+  (Session info: chrome=149.0.7827.115)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [01b83766ac460b4c50c2235a7132a965, findElement {using=id, value=user-nam}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.115, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53863}, goog:processID: 18380, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53863/devtoo..., se:cdpVersion: 149.0.7827.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 01b83766ac460b4c50c2235a7132a965
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at StepDefinitions.SwagLogin_StepDef.user_enters_valid_username_and_password(SwagLogin_StepDef.java:20)
+	at ✽.user enters valid username and password(classpath:features/TC001_SwagLogin.feature:8)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -449,19 +624,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>May 23, 2026 07:13:36 PM</div>
+					<div class='panel-lead'>Jun 21, 2026 05:34:55 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>May 23, 2026 07:14:24 PM</div>
+			 		<div class='panel-lead'>Jun 21, 2026 05:35:15 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 48.406</div>
+					<div class='panel-lead'>00 00 19.617</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -505,21 +680,21 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@SwagAddProductToCart</td>
+							<td>@SwagLogin</td>
+							<td>0</td>
 							<td>1</td>
 							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 						<tr>
-							<td>@SwagLogin</td>
+							<td>@SwagAddProductToCart</td>
+							<td>0</td>
 							<td>1</td>
 							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 					</table>
@@ -534,34 +709,34 @@
 		<script>
 			var statusGroup = {
                 parentCount: 2,
-				passParent: 2,
-				failParent: 0,
+				passParent: 0,
+				failParent: 2,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
 				childCount: 2,
-				passChild: 2,
-				failChild: 0,
+				passChild: 0,
+				failChild: 2,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				grandChildCount: 11,
-				passGrandChild: 11,
-				failGrandChild: 0,
+				passGrandChild: 0,
+				failGrandChild: 2,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 9,
 				infoGrandChild: 0,
 			};
 			</script>
 		
 		<script>
 			var timeline = {
-			        "Login to the swag application":23.937,"Add Product to the swag application":21.243
+			        "Login to the swag application":9.735,"Add Product to the swag application":6.745
 			};
 		</script>
 		

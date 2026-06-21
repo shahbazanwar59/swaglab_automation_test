@@ -1,22 +1,15 @@
 package StepDefinitions;
 
-import java.io.ByteArrayInputStream;
-import java.io.File;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import configuration.Base;
-import io.cucumber.java.After;
-import io.cucumber.java.Scenario;
 import io.cucumber.java.en.*;
-import io.qameta.allure.Allure;
 import utility.ExcelDataUtility;
 import utility.TestUtil;
 
@@ -105,16 +98,7 @@ public class SwagAddProductToCart_StepDef extends Base{
 	}
 
 	
-	@After
-	public void afterScenariosFinish(Scenario scenario)
-	{
-		if(scenario.isFailed())
-		{
-			
-			byte[] screenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-			Allure.addAttachment("Failed Screenshot", new ByteArrayInputStream(screenshot));
-		//driver.quit();
-		}
-	}
+	//@After
+	
 	
 }

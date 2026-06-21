@@ -201,3 +201,7 @@
 [INFO ] 2026-05-23 19:14:01 [main] (SwagLogin_StepDef.java:23) - Enter password
 [INFO ] 2026-05-23 19:14:08 [main] (Login.java:18) - Enter phone number
 [INFO ] 2026-05-23 19:14:08 [main] (Login.java:20) - Enter password
+[INFO ] 2026-06-21 17:32:19 [main] (SwagLogin_StepDef.java:21) - Enter phone number
+[INFO ] 2026-06-21 17:32:19 [main] (SwagLogin_StepDef.java:23) - Enter password
+[INFO ] 2026-06-21 17:32:27 [main] (Login.java:18) - Enter phone number
+[INFO ] 2026-06-21 17:32:27 [main] (Login.java:20) - Enter password
