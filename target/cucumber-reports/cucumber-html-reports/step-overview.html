@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>SWAG_UAT_Cucumber</td>
+                          <td>1</td>
+                        <td>18 Nov 2025, 14:17</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">StepDefinitions.Hooks.afterScenariosFinish()</td>
+                <td>2</td>
+                <td class="duration" data-value="2000000">002ms</td>
+                <td class="duration" data-value="1000000">001ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.Hooks.beforeScenarioStart()</td>
+                <td>2</td>
+                <td class="duration" data-value="9098331200">9s 098ms</td>
+                <td class="duration" data-value="4549165600">4s 549ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SwagAddProductToCart_StepDef.Back_to_Home()</td>
+                <td>1</td>
+                <td class="duration" data-value="125808100">125ms</td>
+                <td class="duration" data-value="125808100">125ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SwagAddProductToCart_StepDef.Checkout_the_Product()</td>
+                <td>1</td>
+                <td class="duration" data-value="65596300">065ms</td>
+                <td class="duration" data-value="65596300">065ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SwagAddProductToCart_StepDef.Continue_to_the_Checkout()</td>
+                <td>1</td>
+                <td class="duration" data-value="615687200">615ms</td>
+                <td class="duration" data-value="615687200">615ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SwagAddProductToCart_StepDef.Enter_Your_Checkout_Information()</td>
+                <td>1</td>
+                <td class="duration" data-value="5598695500">5s 598ms</td>
+                <td class="duration" data-value="5598695500">5s 598ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SwagAddProductToCart_StepDef.Finish_the_Checkout_Process()</td>
+                <td>1</td>
+                <td class="duration" data-value="588694500">588ms</td>
+                <td class="duration" data-value="588694500">588ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SwagAddProductToCart_StepDef.afterScenariosFinish(io.cucumber.java.Scenario)</td>
+                <td>2</td>
+                <td class="duration" data-value="3053100">003ms</td>
+                <td class="duration" data-value="1526550">001ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SwagAddProductToCart_StepDef.click_on_add_to_cart_button()</td>
+                <td>1</td>
+                <td class="duration" data-value="88819400">088ms</td>
+                <td class="duration" data-value="88819400">088ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SwagAddProductToCart_StepDef.product_available_add_the_product_to_cart()</td>
+                <td>1</td>
+                <td class="duration" data-value="586138900">586ms</td>
+                <td class="duration" data-value="586138900">586ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SwagAddProductToCart_StepDef.user_select_the_prodcut()</td>
+                <td>1</td>
+                <td class="duration" data-value="3899880700">3s 899ms</td>
+                <td class="duration" data-value="3899880700">3s 899ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SwagLogin_StepDef.clicks_on_the_login_button()</td>
+                <td>1</td>
+                <td class="duration" data-value="126371800">126ms</td>
+                <td class="duration" data-value="126371800">126ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SwagLogin_StepDef.user_enters_valid_username_and_password()</td>
+                <td>1</td>
+                <td class="duration" data-value="1214495300">1s 214ms</td>
+                <td class="duration" data-value="1214495300">1s 214ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.SwagLogin_StepDef.user_should_be_navigated_to_the_home_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="2345000">002ms</td>
+                <td class="duration" data-value="2345000">002ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>14</td>
+              <td>17</td>
+              <td class="duration">22s 015ms</td>
+              <td class="duration">1s 295ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
