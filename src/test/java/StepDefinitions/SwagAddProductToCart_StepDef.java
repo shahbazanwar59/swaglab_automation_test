@@ -1,6 +1,7 @@
 package StepDefinitions;
 
 import java.io.ByteArrayInputStream;
+import java.io.File;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -104,10 +105,7 @@ public class SwagAddProductToCart_StepDef extends Base{
 	}
 
 	
-	//@After
-	
-@After
-	
+	@After
 	public void afterScenariosFinish(Scenario scenario)
 	{
 		if(scenario.isFailed())
@@ -118,6 +116,5 @@ public class SwagAddProductToCart_StepDef extends Base{
 		//driver.quit();
 		}
 	}
-	
 	
 }
