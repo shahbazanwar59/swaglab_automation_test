@@ -105,16 +105,14 @@ public class SwagAddProductToCart_StepDef extends Base{
 	}
 
 	
-	@After
-	public void afterScenariosFinish(Scenario scenario)
-	{
-		if(scenario.isFailed())
-		{
-			
-			byte[] screenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-			Allure.addAttachment("Failed Screenshot", new ByteArrayInputStream(screenshot));
-		//driver.quit();
-		}
-	}
+	/*
+	 * @After public void afterScenariosFinish(Scenario scenario) {
+	 * if(scenario.isFailed()) {
+	 * 
+	 * byte[]
+	 * screenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+	 * Allure.addAttachment("Failed Screenshot", new
+	 * ByteArrayInputStream(screenshot)); //driver.quit(); } }
+	 */
 	
 }
