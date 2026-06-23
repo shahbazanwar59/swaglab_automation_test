@@ -32,16 +32,15 @@ public class Hooks extends Base{
 	
 	@After
 	
-	public void afterScenariosFinish(Scenario scenario)
-	{
-		if(scenario.isFailed())
-		{
-			
-			byte[] screenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-			Allure.addAttachment("Failed Screenshot", new ByteArrayInputStream(screenshot));
-		//driver.quit();
-		}
-	}
+	/*
+	 * public void afterScenariosFinish(Scenario scenario) { if(scenario.isFailed())
+	 * {
+	 * 
+	 * byte[]
+	 * screenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+	 * Allure.addAttachment("Failed Screenshot", new
+	 * ByteArrayInputStream(screenshot)); //driver.quit(); } }
+	 */
 	
 	public void afterScenariosFinish()
 	{
